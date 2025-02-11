@@ -5,32 +5,111 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### UX/UI Design
 
-## Learn More
+I asked Deepseek about the best UX/UI to use on this website.
 
-To learn more about Next.js, take a look at the following resources:
+**Header:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Title: "Conway's Game of Life"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Short description: "A cellular automaton simulation."
 
-## Deploy on Vercel
+**Main Content:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Grid: Center the grid on the page. Make it responsive so it scales nicely on all screen sizes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Controls: Place buttons and inputs below or beside the grid (depending on screen size).
+
+**Footer:** (Is not required by the example)
+
+Add a link to learn more about Conway's Game of Life (e.g., Wikipedia).
+
+Optionally, include a "Reset Grid" button here.
+
+### Responsive Design
+
+**Desktop:**
+
+Grid takes up most of the screen width.
+
+Controls are placed below the grid in a single row.
+
+**Tablet:**
+
+Grid scales down slightly.
+
+Controls are stacked vertically below the grid.
+
+**Mobile:**
+
+Grid is smaller, with cells scaled down to fit the screen.
+
+Controls are stacked vertically, and text is larger for easier tapping.
+
+### mock API
+
+It is located under `service` folder.
+
+- According to the Games rules, we have two possible states for a cell, "Live" or "Dead"
+- Every cell interacts with its neighbours, we need to know how many living cells are around it.
+- We need to perform some checks to know the cell's next state:
+  - Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+  - Any live cell with two or three live neighbours lives on to the next generation.
+  - Any live cell with more than three live neighbours dies, as if by overpopulation.
+  - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+- We should be able to run x amount of cycles for a game state.
+
+The API will have one endpoint/action that will take 2 arguments
+
+- state: Grid `required`
+- cycles: Number `optional`
+  And it will provide an state.
+
+**Response**
+
+```ts
+{
+    status: 'success': 'fail',
+    error: string | null,
+    data: Grid // Game Next State, or Previous one if there is an error.
+}
+```
+
+**Errors**
+
+- code 1: When `cycles` is negative, zero, or is not a number. "Please provide a positive number"
+- code 2: "Sorry, something went wrong with next state calculation"
+
+### tests
+
+I will use Jest, RTL and jest-canvas-mock
+
+### Stories
+
+- User should be able to see the title "Conway's game of life"
+- User should be able to see a description "A cellular automaton simulation."
+- User should be able to see the game's grid
+- User should be able to select the initial state
+- User should be able to advance click on 'Next state' button
+  - User should be able to see a loading state
+  - User should be able to see the game's next state
+- User should be able to check 'Play Forever' checkbox
+  - User should be able to see the game's next state every second
+  - User should be able to see a message "Automated Game" on top of the game's grid
+  - User should not be able to alter the game's grid when the game is being played forever.
+  - User should be able to uncheck 'Play Forever' checkbox
+- User should be able to type a number on "Advance Steps" input
+  - User should not be able to place a negative number, or zero.
+- User should be able to click on "Advance steps" button.
+  - User should be able to see the game's next state
+- User should be able to see an error when it happens
+- User should be redirected if he places a wrong url.
