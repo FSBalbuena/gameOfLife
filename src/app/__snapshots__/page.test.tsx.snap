@@ -3,7 +3,7 @@
 exports[`GameOfLife renders renders homepage unchanged 1`] = `
 <div>
   <main
-    class="flex flex-col align-center items-center p-10 pt-20 md:w-3/5 lg:w-1/2 xl:w-2/5 mx-auto"
+    class="flex flex-col align-center items-center p-10 pt-20 md:w-3/5 lg:w-1/2 xl:w-2/5 mx-auto h-svh"
   >
     <h1
       class="text-4xl mb-4"
@@ -13,9 +13,9 @@ exports[`GameOfLife renders renders homepage unchanged 1`] = `
     <p>
       A cellular automaton simulation.
     </p>
-    <canvas
-      class="w-full h-full"
-      id="game-of-life-canvas"
+    <svg
+      class="w-full sm:w-2/3 aspect-square border"
+      role="application"
     />
     <label
       class="flex gap-2 p-1 self-end"

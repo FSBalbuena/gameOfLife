@@ -1,10 +1,23 @@
-const GRID_ID = "game-of-life-canvas";
+"use client";
+import { useCallback, useState } from "react";
+import BoardSVG from "@/app/BoardSVG";
+import { EMPTY_GRID } from "@/data/common";
+
 export default function Home() {
+  const [grid, setGrid] = useState(EMPTY_GRID);
+  const updateByIndex = useCallback((x: number, y: number) => {
+    setGrid((prevGrid) => {
+      const newGrid = prevGrid.map((row) => [...row]);
+      newGrid[x][y] = !newGrid[x][y];
+      return newGrid;
+    });
+  }, []);
+
   return (
-    <main className="flex flex-col align-center items-center p-10 pt-20 md:w-3/5 lg:w-1/2 xl:w-2/5 mx-auto">
+    <main className="flex flex-col align-center items-center p-10 pt-20 md:w-3/5 lg:w-1/2 xl:w-2/5 mx-auto h-svh">
       <h1 className="text-4xl mb-4">Conway&apos;s Game of Life</h1>
       <p>A cellular automaton simulation.</p>
-      <canvas id={GRID_ID} className="w-full h-full"></canvas>
+      <BoardSVG grid={grid} onUpdate={updateByIndex} />
       <label htmlFor="play-forever" className="flex gap-2 p-1 self-end">
         <input type="checkbox" id="play-forever" />
         Play Forever
