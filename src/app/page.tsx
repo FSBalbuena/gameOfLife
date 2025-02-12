@@ -1,10 +1,8 @@
-import Link from "next/link";
-
-export default function Page() {
+export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link href="/about">About</Link>
-    </div>
+    <main className="flex flex-col items-center p-10 pt-20">
+      <h1 className="text-4xl mb-4">Conway&apos;s Game of Life</h1>
+      <p>A cellular automaton simulation.</p>
+    </main>
   );
 }

@@ -2,15 +2,17 @@
 
 exports[`Page renders homepage unchanged 1`] = `
 <div>
-  <div>
-    <h1>
-      Home
-    </h1>
-    <a
-      href="/about"
+  <main
+    class="flex flex-col items-center p-10 pt-20"
+  >
+    <h1
+      class="text-4xl mb-4"
     >
-      About
-    </a>
-  </div>
+      Conway's Game of Life
+    </h1>
+    <p>
+      A cellular automaton simulation.
+    </p>
+  </main>
 </div>
 `;
