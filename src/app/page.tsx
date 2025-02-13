@@ -8,7 +8,7 @@ export default function Home() {
   const updateByIndex = useCallback((x: number, y: number) => {
     setGrid((prevGrid) => {
       const newGrid = prevGrid.map((row) => [...row]);
-      newGrid[x][y] = !newGrid[x][y];
+      newGrid[x][y] = newGrid[x][y] ? 0 : 1;
       return newGrid;
     });
   }, []);

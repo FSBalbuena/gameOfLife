@@ -1,8 +1,8 @@
 import { useCallback, ReactEventHandler } from "react";
-
+import { Grid } from "@/data/types";
 type Props = {
   onUpdate: (x: number, y: number) => void;
-  grid: boolean[][];
+  grid: Grid;
   range: number;
 };
 

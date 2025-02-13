@@ -29,7 +29,7 @@ describe("BoardSVG", () => {
 
   it("Renders the correct state for cells", () => {
     const statedGrid = grid.map((row) => [...row]);
-    statedGrid[0][3] = true;
+    statedGrid[0][3] = 1;
     render(<BoardSVG {...defaultProps} grid={statedGrid} />);
     const cellGroup = screen.getAllByRole("button");
     const liveCell = cellGroup.at(3);
