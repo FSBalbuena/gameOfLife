@@ -1,4 +1,3 @@
-"use server";
 import { Grid } from "@/data/types";
 export const countLiveNeighbors = (grid: Grid, x: number, y: number) => {
   let count = 0;
