@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoardSVG Renders without crashing 1`] = `
+<div>
+  <svg
+    class="w-full sm:w-2/3 aspect-square border"
+    role="application"
+  >
+    <rect
+      aria-colindex="0"
+      aria-rowindex="0"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="0%"
+    />
+    <rect
+      aria-colindex="1"
+      aria-rowindex="0"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="20%"
+    />
+    <rect
+      aria-colindex="2"
+      aria-rowindex="0"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="40%"
+    />
+    <rect
+      aria-colindex="3"
+      aria-rowindex="0"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="60%"
+    />
+    <rect
+      aria-colindex="4"
+      aria-rowindex="0"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="80%"
+    />
+    <rect
+      aria-colindex="0"
+      aria-rowindex="1"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="0%"
+    />
+    <rect
+      aria-colindex="1"
+      aria-rowindex="1"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="20%"
+    />
+    <rect
+      aria-colindex="2"
+      aria-rowindex="1"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="40%"
+    />
+    <rect
+      aria-colindex="3"
+      aria-rowindex="1"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="60%"
+    />
+    <rect
+      aria-colindex="4"
+      aria-rowindex="1"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="80%"
+    />
+    <rect
+      aria-colindex="0"
+      aria-rowindex="2"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="0%"
+    />
+    <rect
+      aria-colindex="1"
+      aria-rowindex="2"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="20%"
+    />
+    <rect
+      aria-colindex="2"
+      aria-rowindex="2"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="40%"
+    />
+    <rect
+      aria-colindex="3"
+      aria-rowindex="2"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="60%"
+    />
+    <rect
+      aria-colindex="4"
+      aria-rowindex="2"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="80%"
+    />
+    <rect
+      aria-colindex="0"
+      aria-rowindex="3"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="0%"
+    />
+    <rect
+      aria-colindex="1"
+      aria-rowindex="3"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="20%"
+    />
+    <rect
+      aria-colindex="2"
+      aria-rowindex="3"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="40%"
+    />
+    <rect
+      aria-colindex="3"
+      aria-rowindex="3"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="60%"
+    />
+    <rect
+      aria-colindex="4"
+      aria-rowindex="3"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="80%"
+    />
+    <rect
+      aria-colindex="0"
+      aria-rowindex="4"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="0%"
+    />
+    <rect
+      aria-colindex="1"
+      aria-rowindex="4"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="20%"
+    />
+    <rect
+      aria-colindex="2"
+      aria-rowindex="4"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="40%"
+    />
+    <rect
+      aria-colindex="3"
+      aria-rowindex="4"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="60%"
+    />
+    <rect
+      aria-colindex="4"
+      aria-rowindex="4"
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="80%"
+    />
+  </svg>
+</div>
+`;

@@ -1,39 +1,19 @@
-"use client";
-import {
-  useEffect,
-  useState,
-  useRef,
-  useCallback,
-  ReactEventHandler,
-} from "react";
-import { RANGE } from "@/data/common";
+import { useCallback, ReactEventHandler } from "react";
 
 type Props = {
   onUpdate: (x: number, y: number) => void;
   grid: boolean[][];
+  range: number;
 };
 
-export default function BoardSVG({ onUpdate, grid }: Props) {
-  const [cellSize, setCellSize] = useState(0);
-  const svgRef = useRef<SVGSVGElement>(null);
-
-  useEffect(() => {
-    const addSize = () => {
-      const svg = svgRef.current;
-      if (svg) {
-        setCellSize(svg.clientWidth / RANGE);
-      }
-    };
-    addSize();
-    window.addEventListener("resize", addSize);
-    return () => {
-      window.removeEventListener("resize", addSize);
-    };
-  });
-
+export default function BoardSVG({ onUpdate, grid, range }: Props) {
   const handleClick: ReactEventHandler<SVGSVGElement> = useCallback(
     (event) => {
-      const { x, y } = event.target?.dataset || {};
+      const cell = event.target as SVGSVGElement & {
+        ariaRowIndex: number;
+        ariaColIndex: number;
+      };
+      const { ariaRowIndex: x, ariaColIndex: y } = cell;
       onUpdate(Number(x), Number(y));
     },
     [onUpdate]
@@ -42,27 +22,25 @@ export default function BoardSVG({ onUpdate, grid }: Props) {
   return (
     <svg
       role="application"
-      ref={svgRef}
       className="w-full sm:w-2/3 aspect-square border"
       onClick={handleClick}
     >
-      {cellSize
-        ? grid.map((row, rowIndex) =>
-            row.map((cell, colIndex) => (
-              <rect
-                key={`${rowIndex}-${colIndex}`}
-                x={rowIndex * cellSize}
-                y={colIndex * cellSize}
-                data-x={rowIndex}
-                data-y={colIndex}
-                width={cellSize}
-                height={cellSize}
-                fill={cell ? "black" : "white"}
-                className="stroke-gray-400 stroke-1"
-              />
-            ))
-          )
-        : null}
+      {grid.map((row, rowIndex) =>
+        row.map((cell, colIndex) => (
+          <rect
+            role="button"
+            key={`${rowIndex}-${colIndex}`}
+            x={`${(rowIndex * 100) / range}%`}
+            y={`${(colIndex * 100) / range}%`}
+            aria-rowindex={rowIndex}
+            aria-colindex={colIndex}
+            width={`${100 / range}%`}
+            height={`${100 / range}%`}
+            fill={cell ? "black" : "white"}
+            className="stroke-gray-400 stroke-1"
+          />
+        ))
+      )}
     </svg>
   );
 }
