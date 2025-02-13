@@ -1,12 +1,14 @@
-import { useCallback, ReactEventHandler } from "react";
+"use client";
+import { useCallback, useMemo, ReactEventHandler } from "react";
 import { Grid } from "@/data/types";
 type Props = {
   onUpdate: (x: number, y: number) => void;
   grid: Grid;
-  range: number;
 };
 
-export default function BoardSVG({ onUpdate, grid, range }: Props) {
+export default function BoardSVG({ onUpdate, grid }: Props) {
+  const xRange = useMemo(() => grid.length, [grid]);
+  const yRange = useMemo(() => grid[0].length, [grid]); // type ensures safe empty
   const handleClick: ReactEventHandler<SVGSVGElement> = useCallback(
     (event) => {
       const cell = event.target as SVGSVGElement & {
@@ -30,12 +32,12 @@ export default function BoardSVG({ onUpdate, grid, range }: Props) {
           <rect
             role="button"
             key={`${rowIndex}-${colIndex}`}
-            x={`${(rowIndex * 100) / range}%`}
-            y={`${(colIndex * 100) / range}%`}
+            x={`${(rowIndex * 100) / xRange}%`}
+            y={`${(colIndex * 100) / yRange}%`}
             aria-rowindex={rowIndex}
             aria-colindex={colIndex}
-            width={`${100 / range}%`}
-            height={`${100 / range}%`}
+            width={`${100 / xRange}%`}
+            height={`${100 / yRange}%`}
             fill={cell ? "black" : "white"}
             className="stroke-gray-400 stroke-1"
           />

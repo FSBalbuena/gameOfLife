@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useState } from "react";
 import BoardSVG from "@/app/BoardSVG";
-import { EMPTY_GRID, RANGE } from "@/data/common";
+import { EMPTY_GRID } from "@/data/common";
 
 export default function Home() {
   const [grid, setGrid] = useState(EMPTY_GRID);
@@ -17,7 +17,7 @@ export default function Home() {
     <main className="flex flex-col align-center items-center p-10 pt-20 md:w-3/5 lg:w-1/2 xl:w-2/5 mx-auto h-svh">
       <h1 className="text-4xl mb-4">Conway&apos;s Game of Life</h1>
       <p>A cellular automaton simulation.</p>
-      <BoardSVG grid={grid} onUpdate={updateByIndex} range={RANGE} />
+      <BoardSVG grid={grid} onUpdate={updateByIndex} />
       <label htmlFor="play-forever" className="flex gap-2 p-1 self-end">
         <input type="checkbox" id="play-forever" />
         Play Forever
