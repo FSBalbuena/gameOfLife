@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoardSVG Renders without crashing 1`] = `
+<div>
+  <svg
+    aria-disabled="false"
+    class="w-full sm:w-2/3 aspect-square border"
+    role="application"
+  >
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="0%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="20%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="40%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="60%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="0%"
+      y="80%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="0%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="20%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="40%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="60%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="20%"
+      y="80%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="0%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="20%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="40%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="60%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="40%"
+      y="80%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="0%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="20%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="40%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="60%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="60%"
+      y="80%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="0%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="20%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="40%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="60%"
+    />
+    <rect
+      class="stroke-gray-400 stroke-1"
+      fill="white"
+      height="20%"
+      role="button"
+      width="20%"
+      x="80%"
+      y="80%"
+    />
+  </svg>
+</div>
+`;

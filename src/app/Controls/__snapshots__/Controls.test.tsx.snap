@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls Renders disabled state 1`] = `
+<div>
+  <div>
+    <div
+      class="flex-col gap-2 sm:flex-row sm:gap-10 flex w-full justify-center disabled"
+      role="group"
+    >
+      <button
+        class="fold-bold rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-yellow-400 hover:text-gray-900"
+        disabled=""
+        type="button"
+      >
+        Next state
+      </button>
+      <div
+        class="flex"
+      >
+        <input
+          aria-describedby="steps-errors advance button"
+          class="border-2 p-1 rounded-md rounded-r-none w-10 text-center"
+          disabled=""
+          id="steps"
+          type="number"
+          value="1"
+        />
+        <button
+          class="fold-bold rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-yellow-400 hover:text-gray-900"
+          disabled=""
+          id="advance button"
+          type="button"
+        >
+          Advance state
+        </button>
+      </div>
+      <button
+        class="flex justify-center fold-bold rounded border-2 border-black bg-black px-1 py-1 text-base font-bold text-white transition duration-100 hover:bg-gray-900 hover:border-yellow-700"
+        disabled=""
+        type="button"
+      >
+        <img
+          alt="restart"
+          class="w-6"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </button>
+    </div>
+    <p
+      class="text-red-500 text-right m-4"
+      id="steps-errors"
+    />
+  </div>
+</div>
+`;
+
+exports[`Controls Renders without crashing 1`] = `
+<div>
+  <div>
+    <div
+      class="flex-col gap-2 sm:flex-row sm:gap-10 flex w-full justify-center"
+      role="group"
+    >
+      <button
+        class="fold-bold rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-yellow-400 hover:text-gray-900"
+        type="button"
+      >
+        Next state
+      </button>
+      <div
+        class="flex"
+      >
+        <input
+          aria-describedby="steps-errors advance button"
+          class="border-2 p-1 rounded-md rounded-r-none w-10 text-center"
+          id="steps"
+          type="number"
+          value="1"
+        />
+        <button
+          class="fold-bold rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-yellow-400 hover:text-gray-900"
+          id="advance button"
+          type="button"
+        >
+          Advance state
+        </button>
+      </div>
+      <button
+        class="flex justify-center fold-bold rounded border-2 border-black bg-black px-1 py-1 text-base font-bold text-white transition duration-100 hover:bg-gray-900 hover:border-yellow-700"
+        type="button"
+      >
+        <img
+          alt="restart"
+          class="w-6"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </button>
+    </div>
+    <p
+      class="text-red-500 text-right m-4"
+      id="steps-errors"
+    />
+  </div>
+</div>
+`;
+
+exports[`Controls Renders without crashing error state 1`] = `
+<div>
+  <div>
+    <div
+      class="flex-col gap-2 sm:flex-row sm:gap-10 flex w-full justify-center"
+      role="group"
+    >
+      <button
+        class="fold-bold rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-yellow-400 hover:text-gray-900"
+        type="button"
+      >
+        Next state
+      </button>
+      <div
+        class="flex"
+      >
+        <input
+          aria-describedby="steps-errors advance button"
+          class="border-2 p-1 rounded-md rounded-r-none w-10 text-center"
+          id="steps"
+          type="number"
+          value="1"
+        />
+        <button
+          class="fold-bold rounded border-2 border-black bg-white px-3 py-1 text-base font-bold text-black transition duration-100 hover:bg-yellow-400 hover:text-gray-900"
+          id="advance button"
+          type="button"
+        >
+          Advance state
+        </button>
+      </div>
+      <button
+        class="flex justify-center fold-bold rounded border-2 border-black bg-black px-1 py-1 text-base font-bold text-white transition duration-100 hover:bg-gray-900 hover:border-yellow-700"
+        type="button"
+      >
+        <img
+          alt="restart"
+          class="w-6"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </button>
+    </div>
+    <p
+      class="text-red-500 text-right m-4"
+      id="steps-errors"
+    >
+      Something went wrong
+    </p>
+  </div>
+</div>
+`;
