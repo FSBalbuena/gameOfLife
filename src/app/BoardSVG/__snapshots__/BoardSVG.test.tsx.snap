@@ -3,12 +3,11 @@
 exports[`BoardSVG Renders without crashing 1`] = `
 <div>
   <svg
+    aria-disabled="false"
     class="w-full sm:w-2/3 aspect-square border"
     role="application"
   >
     <rect
-      aria-colindex="0"
-      aria-rowindex="0"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -18,8 +17,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="0%"
     />
     <rect
-      aria-colindex="1"
-      aria-rowindex="0"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -29,8 +26,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="20%"
     />
     <rect
-      aria-colindex="2"
-      aria-rowindex="0"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -40,8 +35,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="40%"
     />
     <rect
-      aria-colindex="3"
-      aria-rowindex="0"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -51,8 +44,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="60%"
     />
     <rect
-      aria-colindex="4"
-      aria-rowindex="0"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -62,8 +53,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="80%"
     />
     <rect
-      aria-colindex="0"
-      aria-rowindex="1"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -73,8 +62,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="0%"
     />
     <rect
-      aria-colindex="1"
-      aria-rowindex="1"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -84,8 +71,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="20%"
     />
     <rect
-      aria-colindex="2"
-      aria-rowindex="1"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -95,8 +80,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="40%"
     />
     <rect
-      aria-colindex="3"
-      aria-rowindex="1"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -106,8 +89,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="60%"
     />
     <rect
-      aria-colindex="4"
-      aria-rowindex="1"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -117,8 +98,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="80%"
     />
     <rect
-      aria-colindex="0"
-      aria-rowindex="2"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -128,8 +107,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="0%"
     />
     <rect
-      aria-colindex="1"
-      aria-rowindex="2"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -139,8 +116,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="20%"
     />
     <rect
-      aria-colindex="2"
-      aria-rowindex="2"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -150,8 +125,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="40%"
     />
     <rect
-      aria-colindex="3"
-      aria-rowindex="2"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -161,8 +134,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="60%"
     />
     <rect
-      aria-colindex="4"
-      aria-rowindex="2"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -172,8 +143,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="80%"
     />
     <rect
-      aria-colindex="0"
-      aria-rowindex="3"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -183,8 +152,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="0%"
     />
     <rect
-      aria-colindex="1"
-      aria-rowindex="3"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -194,8 +161,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="20%"
     />
     <rect
-      aria-colindex="2"
-      aria-rowindex="3"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -205,8 +170,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="40%"
     />
     <rect
-      aria-colindex="3"
-      aria-rowindex="3"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -216,8 +179,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="60%"
     />
     <rect
-      aria-colindex="4"
-      aria-rowindex="3"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -227,8 +188,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="80%"
     />
     <rect
-      aria-colindex="0"
-      aria-rowindex="4"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -238,8 +197,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="0%"
     />
     <rect
-      aria-colindex="1"
-      aria-rowindex="4"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -249,8 +206,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="20%"
     />
     <rect
-      aria-colindex="2"
-      aria-rowindex="4"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -260,8 +215,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="40%"
     />
     <rect
-      aria-colindex="3"
-      aria-rowindex="4"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"
@@ -271,8 +224,6 @@ exports[`BoardSVG Renders without crashing 1`] = `
       y="60%"
     />
     <rect
-      aria-colindex="4"
-      aria-rowindex="4"
       class="stroke-gray-400 stroke-1"
       fill="white"
       height="20%"

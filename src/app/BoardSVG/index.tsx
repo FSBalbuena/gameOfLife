@@ -1,41 +1,38 @@
 "use client";
-import { useCallback, useMemo, ReactEventHandler } from "react";
+import { useCallback, useMemo } from "react";
+import { clsx } from "clsx";
 import { Grid } from "@/data/types";
 type Props = {
   onUpdate: (x: number, y: number) => void;
   grid: Grid;
+  disabled: boolean;
 };
 
-export default function BoardSVG({ onUpdate, grid }: Props) {
+export default function BoardSVG({ onUpdate, grid, disabled }: Props) {
   const xRange = useMemo(() => grid.length, [grid]);
   const yRange = useMemo(() => grid[0].length, [grid]); // type ensures safe empty
-  const handleClick: ReactEventHandler<SVGSVGElement> = useCallback(
-    (event) => {
-      const cell = event.target as SVGSVGElement & {
-        ariaRowIndex: number;
-        ariaColIndex: number;
-      };
-      const { ariaRowIndex: x, ariaColIndex: y } = cell;
-      onUpdate(Number(x), Number(y));
-    },
+
+  const makeCellHandle = useCallback(
+    (x: number, y: number) => () => onUpdate(x, y),
     [onUpdate]
   );
 
   return (
     <svg
+      aria-disabled={disabled}
       role="application"
-      className="w-full sm:w-2/3 aspect-square border"
-      onClick={handleClick}
+      className={clsx("w-full sm:w-2/3 aspect-square border", {
+        "pointer-events-none cursor-not-allowed": disabled,
+      })}
     >
       {grid.map((row, rowIndex) =>
         row.map((cell, colIndex) => (
           <rect
             role="button"
+            onClick={makeCellHandle(rowIndex, colIndex)}
             key={`${rowIndex}-${colIndex}`}
             x={`${(rowIndex * 100) / xRange}%`}
             y={`${(colIndex * 100) / yRange}%`}
-            aria-rowindex={rowIndex}
-            aria-colindex={colIndex}
             width={`${100 / xRange}%`}
             height={`${100 / yRange}%`}
             fill={cell ? "black" : "white"}

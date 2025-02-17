@@ -1,41 +1,10 @@
 "use server";
+
 import { Grid } from "@/data/types";
 import { getGridNextState } from "@/service/actions";
-import { z } from "zod";
 
-export const SUCCESS = "success";
-export const FAIL = "fail";
-export const REQUIRED_GRID = "Board is required";
-export const INVALID_GRID = "Board must be a 2D array of numbers";
-export const INVALID_GRID_CELL = "Invalid Cell value";
-export const REQUIRED_STEP = "Step is required";
-export const INVALID_STEP_NUMBER = "Step must be a number";
-export const INVALID_STEP_INT = "Step must be an integer";
-export const INVALID_STEP_MIN = "Step must be a positive number";
-export const STANDAR_ERR =
-  "Sorry, something went wrong with next state calculation";
-
-const requestSchema = z.object({
-  grid: z.array(
-    z.array(
-      z.number({
-        invalid_type_error: INVALID_GRID_CELL,
-      })
-    ),
-    {
-      required_error: REQUIRED_GRID,
-      invalid_type_error: INVALID_GRID,
-    }
-  ),
-  steps: z
-    .number({
-      required_error: REQUIRED_STEP,
-      invalid_type_error: INVALID_STEP_NUMBER,
-    })
-    .int(INVALID_STEP_INT)
-    .positive(INVALID_STEP_MIN)
-    .optional(),
-});
+import { requestSchema } from "@/data/common";
+import { SUCCESS, FAIL, STANDAR_ERR } from "@/data/copy";
 
 // Function to validate the argument
 type ApiResponse = {
@@ -44,7 +13,7 @@ type ApiResponse = {
   status: typeof SUCCESS | typeof FAIL;
 };
 
-const createResponse = (
+export const createResponse = async (
   status: ApiResponse["status"],
   data: ApiResponse["data"],
   error: ApiResponse["error"]

@@ -1,5 +1,7 @@
+import { fetchNextGridGeneration, createResponse } from "@/service/api";
+
+import { Grid } from "@/data/types";
 import {
-  fetchNextGridGeneration,
   SUCCESS,
   FAIL,
   INVALID_STEP_MIN,
@@ -8,9 +10,9 @@ import {
   INVALID_GRID,
   REQUIRED_GRID,
   INVALID_GRID_CELL,
-} from "@/service/api";
+  STANDAR_ERR,
+} from "@/data/copy";
 
-import { Grid } from "@/data/types";
 const GRID_EXAMPLE: Grid = [
   [0, 0, 0, 0, 0],
   [0, 0, 1, 0, 0],
@@ -66,7 +68,8 @@ describe("Game of life API", () => {
     });
 
     it("should throw an error if steps is not a number", async () => {
-      const steps = "invalid" as any; // Force TypeScript to allow invalid type
+      const steps = "invalid";
+      // @ts-expect-error: testing invalid steps
       const result = await fetchNextGridGeneration(GRID_EXAMPLE, steps);
       expect(result.status).toBe(FAIL);
       expect(result.error).toStrictEqual({
@@ -78,6 +81,7 @@ describe("Game of life API", () => {
 
   describe("when request sents a wrong grid", () => {
     it("should throw an error if grid is not sent", async () => {
+      // @ts-expect-error: testing invalid call
       const result = await fetchNextGridGeneration();
       expect(result.status).toBe(FAIL);
       expect(result.error).toStrictEqual({
@@ -88,6 +92,7 @@ describe("Game of life API", () => {
 
     it("should throw an error if grid is not valid", async () => {
       const grid = "grid";
+      // @ts-expect-error: testing invalid grid
       const result = await fetchNextGridGeneration(grid);
       expect(result.status).toBe(FAIL);
       expect(result.error).toStrictEqual({
@@ -103,10 +108,20 @@ describe("Game of life API", () => {
         ["2", "2", "2", "2"],
         ["2", "2", NaN, "2"],
       ];
+
+      // @ts-expect-error: testing invalid grid
       const result = await fetchNextGridGeneration(grid);
       expect(result.status).toBe(FAIL);
       expect(result?.error?.grid?.[0]).toBe(INVALID_GRID_CELL);
       expect(result.data).toStrictEqual(grid);
+    });
+  });
+  xdescribe("internal error", () => {
+    it("should throw an error if something happens", async () => {
+      const result = await fetchNextGridGeneration(GRID_EXAMPLE);
+      expect(result.status).toBe(FAIL);
+      expect(result?.error?.grid?.[0]).toBe(STANDAR_ERR);
+      expect(result.data).toStrictEqual(GRID_EXAMPLE);
     });
   });
 });

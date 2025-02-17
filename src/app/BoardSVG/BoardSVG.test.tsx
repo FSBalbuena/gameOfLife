@@ -6,11 +6,12 @@ import BoardSVG from "@/app/BoardSVG";
 const range = 5; // 5x5 grid
 const grid = createGridByRange(range);
 const onUpdate = jest.fn();
-
+const disabled = false;
 const defaultProps = {
   range,
   grid,
   onUpdate,
+  disabled,
 };
 
 describe("BoardSVG", () => {
