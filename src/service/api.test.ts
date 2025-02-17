@@ -10,7 +10,6 @@ import {
   INVALID_GRID,
   REQUIRED_GRID,
   INVALID_GRID_CELL,
-  STANDAR_ERR,
 } from "@/data/copy";
 
 const GRID_EXAMPLE: Grid = [
