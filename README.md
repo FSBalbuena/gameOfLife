@@ -1,5 +1,26 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Inspiration
+
+This project was created for a tech challenge example found on web.
+
+Should be simple, but functional.
+As this was not an actual tech challenge, but an example I found for inspiration, so I created it with next.js because I wanted to have a sproject with this framework as part of my portfolio, but I know is not the best use case to highlight the improvements of this stack.
+
+```
+Create a UI that has:
+1. board that allows turning on and off squares
+2. A way to advance to the next state
+3. A way to play forever the next states
+4. A way to advance x number of states
+With a normal web service there might be an API, but the React app should take the place of the API.
+Include all code to simulate the Game of Life but treat that code as if it were going to be called from an
+API. Do not implement a backend API, unless you want to.
+
+This could take four to five hours. The implementation should be production ready. You don’t need to
+implement any authentication/authorization. Be ready to discuss your solution.
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -56,24 +77,28 @@ It is located under `service` folder.
 
 The API will have one endpoint/action that will take 2 arguments
 
-- state: Grid `required`
-- cycles: Number `optional`
-  And it will provide an state.
+- grid: Grid `required`
+- steps: Number `optional`
+  And it will provide a grid state.
 
 **Response**
 
 ```ts
 {
     status: 'success': 'fail',
-    error: string | null,
+    error: {
+grid: string[] | null,
+steps: string[] | null
+    } // or null,
     data: Grid // Game Next State, or Previous one if there is an error.
 }
 ```
 
 **Errors**
 
-- code 1: When `cycles` is negative, zero, or is not a number. "Please provide a positive number"
-- code 2: "Sorry, something went wrong with next state calculation"
+- When `steps` is invalid
+- When `grid` is invalid
+- When an internal error happens
 
 ### UX/UI Design
 
@@ -95,7 +120,7 @@ Controls: Place buttons and inputs below or beside the grid (depending on screen
 
 Add a link to learn more about Conway's Game of Life (e.g., Wikipedia).
 
-Optionally, include a "Reset Grid" button here.
+Optionally, include a "Reset Grid" button here.(Placed with the rest)
 
 ### Responsive Design
 
@@ -115,7 +140,7 @@ Controls are stacked vertically below the grid.
 
 Grid is smaller, with cells scaled down to fit the screen.
 
-Controls are stacked vertically, and text is larger for easier tapping.
+Controls are stacked vertically.
 
 ### Stories
 
@@ -123,6 +148,7 @@ Controls are stacked vertically, and text is larger for easier tapping.
 - User should be able to see a description "A cellular automaton simulation."
 - User should be able to see the game's grid
 - User should be able to select the initial state
+- User should be able to advance click on 'Restart' button
 - User should be able to advance click on 'Next state' button
   - User should be able to see a loading state
   - User should be able to see the game's next state
@@ -136,4 +162,3 @@ Controls are stacked vertically, and text is larger for easier tapping.
 - User should be able to click on "Advance steps" button.
   - User should be able to see the game's next state
 - User should be able to see an error when it happens
-- User should be redirected if he places a wrong url.
