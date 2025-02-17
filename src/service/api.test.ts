@@ -1,4 +1,4 @@
-import { fetchNextGridGeneration, createResponse } from "@/service/api";
+import { fetchNextGridGeneration } from "@/service/api";
 
 import { Grid } from "@/data/types";
 import {
@@ -117,11 +117,11 @@ describe("Game of life API", () => {
     });
   });
   xdescribe("internal error", () => {
-    it("should throw an error if something happens", async () => {
+    /* it("should throw an error if something happens", async () => {
       const result = await fetchNextGridGeneration(GRID_EXAMPLE);
       expect(result.status).toBe(FAIL);
       expect(result?.error?.grid?.[0]).toBe(STANDAR_ERR);
       expect(result.data).toStrictEqual(GRID_EXAMPLE);
-    });
+    });*/
   });
 });
